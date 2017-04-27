@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-row>
-      <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
+      <el-col :span="24"><div class="grid-content bg-purple-dark s"></div></el-col>
     </el-row>
     <el-row>
       <el-col>
