@@ -1,26 +1,60 @@
 <template>
   <div id="app">
-    <el-row>
-      <el-col :span="24"><div class="grid-content bg-purple-dark s"></div></el-col>
-    </el-row>
-    <el-row>
-      <el-col>
-        <router-view></router-view>
-      </el-col>
-      
-    </el-row>
-    <el-row></el-row>
+    <div>
+      <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu-item index="1">处理中心</el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">我的工作台</template>
+          <el-menu-item index="2-1">选项1</el-menu-item>
+          <el-menu-item index="2-2">选项2</el-menu-item>
+          <el-menu-item index="2-3">选项3</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+      </el-menu>
+      <div class="line"></div>
+      <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu-item index="1">处理中心</el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">我的工作台</template>
+          <el-menu-item index="2-1">选项1</el-menu-item>
+          <el-menu-item index="2-2">选项2</el-menu-item>
+          <el-menu-item index="2-3">选项3</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+      </el-menu>
+  
+    </div>
+    <div>
+      <router-view></router-view>
+    </div>
+  
     <!--<img src="./assets/logo.png">-->
   
   </div>
 </template>
 
 <script>
-import { Row, Col } from 'element-ui'
+import { Menu, Submenu, MenuItem, MenuItemGroup } from 'element-ui'
 
 export default {
   name: 'app',
-  components: [Row, Col]
+  components: {
+    'el-menu': Menu,
+    'el-submenu': Submenu,
+    'el-menu-item': MenuItem,
+    'el-menuitemgroup': MenuItemGroup
+  },
+  data: function () {
+    return {
+      activeIndex: '1',
+      activeIndex2: '1'
+    }
+  },
+  methods: {
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath)
+    }
+  }
 }
 </script>
 
@@ -35,29 +69,35 @@ export default {
 }
 
 .el-row {
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
   }
-  .el-col {
-    border-radius: 4px;
-  }
-  .bg-purple-dark {
-    background: #99a9bf;
-  }
-  .bg-purple {
-    background: #d3dce6;
-  }
-  .bg-purple-light {
-    background: #e5e9f2;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
-  .row-bg {
-    padding: 10px 0;
-    background-color: #f9fafc;
-  }
+}
+
+.el-col {
+  border-radius: 4px;
+}
+
+.bg-purple-dark {
+  background: #99a9bf;
+}
+
+.bg-purple {
+  background: #d3dce6;
+}
+
+.bg-purple-light {
+  background: #e5e9f2;
+}
+
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
+}
 </style>

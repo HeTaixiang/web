@@ -14,8 +14,8 @@
       "component",
       [
         {
-          "libraryName": "element-ui",
-          "styleLibraryName": "theme-default"
+          "libraryName": "lement-ui",
+          "styleLibraryName": "~theme"
         }
       ]
     ]
