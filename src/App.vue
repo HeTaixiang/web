@@ -1,11 +1,14 @@
 <template>
   <div id="app">
+    <el-row></el-row>
     <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import {Row, Col} from 'element-ui'
+
 export default {
   name: 'app'
 }
