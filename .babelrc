@@ -15,7 +15,7 @@
       [
         {
           "libraryName": "lement-ui",
-          "styleLibraryName": "~theme"
+          "styleLibraryName": "theme-default"
         }
       ]
     ]
