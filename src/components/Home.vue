@@ -11,10 +11,10 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <div class="container" style="margin-top:30px">
+                <div class="container">
                     <div class="row">
                         <!-- 子菜单 -->
-                        <div class="col-xs-12 col-sm-4 ">
+                        <div class="col-xs-12 col-sm-3 ">
                             <el-menu default-active="/hello" :router="true">
                                 <el-submenu index="1">
                                     <template slot="title"><i class="el-icon-message"></i>导航一</template>
@@ -37,7 +37,7 @@
                         </div>
     
                         <!-- 内容 -->
-                        <div class="col-xs-12 col-sm-8 ">
+                        <div class="col-xs-12 col-sm-9 ">
                             <!-- 路径显示 -->
                             <div class="row breadcrumb-block">
                                 <div class="col-xs-12 source">

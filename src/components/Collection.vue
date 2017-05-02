@@ -36,7 +36,7 @@ export default {
 
 <style>
   .row {
-    margin-bottom: 15px
+    margin-bottom: 30px
   }
   .time {
     font-size: 13px;
