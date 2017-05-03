@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,7 +31,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../navbar/">Default</a></li>
                     <li><a href="../navbar-static-top/">Static top</a></li>
-                    <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+                    <!--<li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>-->
                 </ul>
             </div>
             <!--/.nav-collapse -->
